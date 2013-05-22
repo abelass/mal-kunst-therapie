@@ -295,7 +295,14 @@ abbr.published { border: 0; }
 
 dl.faq dt {
     font-weight: bold;
+    cursor: pointer;
 }
+dl.faq dt:hover {
+    text-decoration: underline;
+}
+dl.faq dt.commentaire{cursor: auto;}
+dl.faq dt.commentaire:hover{text-decoration: none};
+
 /* Habillage des forums
 ---------------------------------------------- */
 .repondre { clear: both; margin-top: 2.50em; margin-right: 1em; text-align: right; font-weight: bold; }
