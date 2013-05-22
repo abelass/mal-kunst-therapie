@@ -1,0 +1,25 @@
+<BOUCLE_principale(AUTEURS){id_auteur}{tout}>
+
+	<div class="vcard">[(#REM) microformat vcard]
+        <div class="cartouche">
+            [(#LOGO_AUTEUR|image_reduire{200,200})]
+            <h1 class="#EDIT{qui} fn">#NOM</h1>
+        </div>
+
+      <div class="#EDIT{bio} texte note">
+      #PGP
+      <a href="[(#SELF|parametre_url{voir,bio})]">Mehr lesen</a>
+      <a href="[(#SELF|parametre_url{voir,email})]">Mehr lesen</a>    
+        
+        [(#ENV{voir}|=={bio}|oui)#BIO]
+        
+      </div>
+        [<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="url org spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
+		</div>[(#REM) / vcard]
+ 	[(#ENV{voir}|=={email}|oui)
+        #FORMULAIRE_ECRIRE_AUTEUR
+        ]
+
+        [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+
+</BOUCLE_principale>

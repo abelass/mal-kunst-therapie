@@ -1,0 +1,10 @@
+<div id="image_map">
+		<BOUCLE_aut(AUTEURS){id_auteur IN 3,2}{tout}>
+			<a id="link_#ID_AUTEUR" [(#COMPTEUR_BOUCLE|!={1}|oui)class="name"] rel="facebox"  href="[(#URL_PAGE{auteur_facebox}|parametre_url{id_auteur,#ID_AUTEUR})]">#NOM</a>
+		</BOUCLE_aut>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $('a[rel*=facebox]').facebox()
+})
+</script>  

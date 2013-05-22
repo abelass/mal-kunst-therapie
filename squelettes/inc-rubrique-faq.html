@@ -1,0 +1,13 @@
+<B_faq>
+<dl class="faq">
+    <BOUCLE_faq(ARTICLES){id_rubrique}{par num titre}{par date}>
+    [<dt id="dt#COMPTEUR_BOUCLE">#TITRE</dt>
+    <dd>(#TEXTE)</dd>]
+    [(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)
+    	[(#TEXTE|non)
+    		<dt class="commentaire">#TITRE</dt>
+    		]
+    	]
+    </BOUCLE_faq>
+</dl>
+</B_faq>
