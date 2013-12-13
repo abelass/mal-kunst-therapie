@@ -1,0 +1,61 @@
+[(#REM)
+	Un cache plus court, pour la boucle syndic_articles
+]#CACHE{3600}
+<BOUCLE_principale(RUBRIQUES) {id_rubrique}{tout}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR">
+<head>
+<title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+[<meta name="description" content="(#INTRODUCTION{150}|textebrut)" />]
+<INCLURE{fond=inc/head}>
+[(#REM) Lien vers le flux RSS des articles la rubrique ]
+<link rel="alternate" type="application/rss+xml" title="<:syndiquer_rubrique:>" href="[(#URL_PAGE{backend}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" />
+</head>
+
+<body class="page_rubrique">
+<div id="page">
+
+	[(#REM) Entete de la page + titre du site ]
+	<INCLURE{fond=inc/entete}{id_rubrique}>
+
+	[(#REM) Contenu principal : contenu de la rubrique ]
+    <div id="conteneur">
+    <div id="contenu">
+		<div class="zitat">#DESCRIPTIF</div>
+        [<div class="#EDIT{texte} chapo">
+			(#TEXTE)
+        </div>]
+        
+        <INCLURE{fond=inc-rubrique-faq}{id_rubrique}>
+
+
+		[(#ID_RUBRIQUE|=={6}|oui)
+			<INCLURE{fond=inc/image_auteurs}{env}/>
+			]
+
+   
+        [(#REM) Sites de la rubrique ]
+		<INCLURE{fond=inc-rubrique-faq_sites}{id_rubrique}/>
+
+        [(#REM) Proposer un site ]
+        #FORMULAIRE_SITE
+
+        [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+
+	</div><!--#contenu-->
+	    <div id="extra">
+	    	<div class="image_block">
+		[(#LOGO_RUBRIQUE_SURVOL|image_reduire{512})]
+		<INCLURE{fond=inc/teaser}/>
+		</div>
+    </div><!--#extra-->
+	</div><!--#conteneur-->
+
+
+
+
+
+</div><!--#page-->
+</body>
+</html>
+</BOUCLE_principale>
