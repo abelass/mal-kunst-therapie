@@ -4,12 +4,11 @@
 			<div class="header" id="header">
 				[(#ENV{type-page}|=={sommaire}|?{
 				#INCLURE{fond=inclure/teaser},
-				''
-				
-				})]
 				[<nav class="navbar navbar-inverse navbar-responsive" id="nav">
 				(#INCLURE{fond=inclure/rubriques,env}|navbar_responsive)
 			</nav>]
+				})]
+				
 
 			</div>
 

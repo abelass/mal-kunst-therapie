@@ -33,7 +33,7 @@
 html { font-size: 100%; } /* Cf.: http://pompage.net/pompe/definir-des-tailles-de-polices-en-CSS/ */
 
 body {
-	font: 14px 'FanwoodRegular', Arial, sans-serif;letter-spacing: 0;color: #4d4d4d;
+	font: 1.2em 'FanwoodRegular', Arial, sans-serif;letter-spacing: 0;color: #4d4d4d;
 	
 	}
 
@@ -43,7 +43,7 @@ h1 { font-size: 1.70em; }
 h2 { font-size: 1.40em; font-weight: normal; }
 h2, h2 a, h2 a:focus, h2 a:hover, h2 a:active { color: #003; }
 h3 { font-size: 1.20em; font-weight: bold; }
-h3.spip {font-size:14px;
+h3.spip {font-size:1.2em;
     margin-bottom: 1em;
     margin-top: 1em;
     text-align: left;
@@ -134,7 +134,8 @@ body { background: #FFF; margin:0;
 #extra {float:left;width:40%;text-align:right;position:relative;}
 
 
-
+.box{    margin: 0;
+}
 
 /* Espaceur de blocs */
 .nettoyeur { clear: both; height: 0; margin: 0; padding: 0; border: 0; line-height: 1px; font-size: 1px; }
@@ -212,14 +213,10 @@ text-align:center;
 
 .menu_item .reise{
 	display: block;
-	font-size:22px;
-	padding-top:80px;
-	line-height:25px;
+	font-size:1.2em;
+	padding-top:2em;
 	text-align:left;
 	color: #4d4d4d;
-	font-size:20px;
-
-	
 	}
 
 .r-1{padding-right:25px;text-align:right;}
@@ -398,7 +395,9 @@ a { color: #4d4d4d; text-decoration: none; }
 	color: #b3b3b3;		
 }
 
-a:focus,a:hover,a:active { text-decoration: underline; }
+a:focus,a:hover,a:active {
+ text-decoration: underline;
+ background:transparent }
 .menu a.on{color: #000000;}
 
 .header .accueil a {
@@ -410,10 +409,33 @@ a:focus,a:hover,a:active { text-decoration: underline; }
 
 .show .hidden{display:none;}
 
-.show:hover span.hidden{display:block;}
+.show:hover span.hidden{display:block;visibility:visible}
 
 #extra .image_block{position:fixed;bottom:30px;right:0; width: 40%;}
 
+@media only screen and (max-width: 767px) {
+.menu_item {
+    width: 100px;
+    height:100px;
+    .logo{height: 76px;}
 
-#extra .image_block .spip_logos{position:relative; ight:0}
+    a.titre{font-size:0.6em}
+}
+	#content, #aside, #extra{width:100%}
+	
+	#extra .image_block{position:relative;margin:1em auto}
+ .menu_item .reise{
+	padding-top:0;
+	font-size:0.7em;
+	line-height:normal
+	}   	
+    	.r-1,r-2,r-3 {
+    padding-right: 0.2em;
+    text-align: right;
+    margin:0
+}
+
+    	}
+    	
+
 	

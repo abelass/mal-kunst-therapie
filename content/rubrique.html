@@ -1,4 +1,4 @@
-<BOUCLE_content(RUBRIQUES){id_rubrique}>
+<BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
 <section>
 
     <header class="cartouche">
@@ -12,9 +12,9 @@
     </div>
 
     <aside>
-       		[(#ID_RUBRIQUE|=={6}|oui)
-			<INCLURE{fond=inclure/image_auteurs}{env}/>
-			]
+	[(#ID_RUBRIQUE|=={6}|oui)
+		<INCLURE{fond=inclure/image_auteurs}{env}/>
+		]
 
    
         [(#REM) Sites de la rubrique ]
