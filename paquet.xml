@@ -6,7 +6,6 @@
 	compatibilite="[3.0.13;3.0.*]"
 	documentation=""
 >
-
 	<nom>Mal Kunst Therapie</nom>
 
 	<auteur lien='http://websimple.be'>Rainer Müller</auteur>
