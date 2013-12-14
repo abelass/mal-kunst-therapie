@@ -18,10 +18,9 @@
 	<necessite nom="faq" compatibilite="[2.1.21;]" />
 	<necessite nom="mailcrypt" compatibilite="[2.4.0;]" />		
 	<necessite nom="cextras" compatibilite="[3.2.5;[" />	
-	<necessite nom="iextras" compatibilite="[3.1.0;[" />
-	
+	<necessite nom="iextras" compatibilite="[3.1.0;[" />	
 	
 	<utilise nom="bootstrap" compatibilite="[1.5.3;]" />
 	<utilise nom="spipr_dist" compatibilite="[0.4.3;]" />
-	
+	<utilise nom="Zcore" compatibilite="[2.3.0;]" />	
 </paquet>

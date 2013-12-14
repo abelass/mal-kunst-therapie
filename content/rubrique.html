@@ -1,0 +1,32 @@
+<BOUCLE_content(RUBRIQUES){id_rubrique}>
+<section>
+
+    <header class="cartouche">
+        <h1 class="#EDIT{titre}">#TITRE</h1>
+    </header>
+
+    <div class="main">
+	<div class="zitat">#DESCRIPTIF</div>
+        [<div class="#EDIT{texte} chapo">(#TEXTE)</div>]
+	<INCLURE{fond=inclure/rubrique-faq}{id_rubrique}>
+    </div>
+
+    <aside>
+       		[(#ID_RUBRIQUE|=={6}|oui)
+			<INCLURE{fond=inclure/image_auteurs}{env}/>
+			]
+
+   
+        [(#REM) Sites de la rubrique ]
+		<INCLURE{fond=inclure/rubrique-faq_sites}{id_rubrique}/>
+
+        [(#REM) Proposer un site ]
+        #FORMULAIRE_SITE
+    </aside>
+
+    <footer>
+        [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+    </footer>
+
+</section>
+</BOUCLE_content>

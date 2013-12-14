@@ -1,0 +1,15 @@
+<div class="row">
+	<header class="accueil clearfix span9" id="entete">
+		[(#ENV{type-page}|=={sommaire}|oui)
+		#INCLURE{fond=inclure/teaser}
+		]
+		[(#ENV{type-page}|=={sommaire}|non)
+		[<div class="navbar navbar-inverse navbar-responsive" id="nav">
+				(#INCLURE{fond=inclure/rubriques,id_rubrique}|navbar_responsive)
+			</div>]
+		})]
+	</header>
+</div>
+
+			
+

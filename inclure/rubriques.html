@@ -6,12 +6,14 @@
 
 <B_rubriques>
 <div class="menu rubriques">
-	<ul>
+	<ul class=" nav">
 	<BOUCLE_rubriques(RUBRIQUES) {racine} {par num titre, titre}{tout}>
-		<li>
-			<a href="#URL_RUBRIQUE"[ class="(#EXPOSE)"]>[(#TITRE|couper{80})]</a>
+		<li[ class="(#EXPOSE)"]>
+			<a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a>
 		</li>
 	</BOUCLE_rubriques>
 	</ul>
 </div>
 </B_rubriques>
+
+

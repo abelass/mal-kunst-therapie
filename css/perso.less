@@ -102,16 +102,16 @@ body { background: #FFF; margin:0;
  padding:0;
  text-align: center;}
 
-#page { position: relative; width: 100%;
+.page { position: relative; width: 100%;
  max-width: 1250px; margin:0 auto;
  text-align: left; padding:0;
  min-width:321px;
  
  }
-.page_sommaire #page{
+.page_sommaire .page{
 	width:98%;
 	max-width:810px;
-
+	overflow:hidden;
 	min-width:260px;	
 }
 
@@ -119,13 +119,11 @@ body { background: #FFF; margin:0;
 }
 
 
-#conteneur {float:left;width:100%; overflow:hidden;
+.row {float:left;width:100%; overflow:hidden;margin-left:0;}
 
-}
-
-#contenu {margin: 100px 0px 0 0px; width: 58%; float:left; padding:0 0 0 2%;
+#content {margin: 100px 0px 0 0px; width: 58%; float:left; padding:0 0 0 2%;
 } 
-.page_sommaire #contenu {
+.page_sommaire #content {
 	width:100%;
 	
 }
@@ -232,7 +230,7 @@ text-align:center;
 .menu_item:hover .box{display: block;text-decoration:none;position:relative}
 
 
-.menu_item:hover a{text-decoration:none;}
+.menu_item:hover a{text-decoration:none;background:transparent}
 
 
 .menu_item .titre{
@@ -247,6 +245,7 @@ text-align:center;
 
 .menu_item .logo{height:205px;}
 
+.footer{display:none}
 /*
 .menu_item a span {display:block;
 height:205px;}
@@ -292,16 +291,26 @@ abbr.published { border: 0; }
 	font-size:17px;
 	
 }
-
-dl.faq dt {
-    font-weight: bold;
-    cursor: pointer;
+dl dt, dl dd {padding:0}
+dl.faq {
+	dt {
+	    font-weight: bold;
+	    cursor: pointer;
+	}
+	.close{
+		float:none; 
+		margin:0;
+		padding:0;
+		line-height:normal;
+		color:#4D4D4D;
+		opacity:1;
+		font-size:1.1em}
+	dt:hover {
+	    text-decoration: underline;
+	}
+	dt.commentaire{cursor: auto}
+	dt.commentaire:hover{text-decoration: none}
 }
-dl.faq dt:hover {
-    text-decoration: underline;
-}
-dl.faq dt.commentaire{cursor: auto;}
-dl.faq dt.commentaire:hover{text-decoration: none};
 
 /* Habillage des forums
 ---------------------------------------------- */
@@ -352,10 +361,15 @@ ul ul ul ul ul .forum-chapo { background: #FFF; }
 /* ------------------------------------------ */
 
 /* Habillage general des menus de navigation */
-.menu { clear: both; margin-bottom: 2em; text-align: left; }
-.menu p { margin: 0.20em 0; padding: 0.20em 0.10em; }
-.menu ul { margin: 0; padding: 0; list-style: none; }
-.menu ul li { margin: 0.20em 6% 0.2em 0; padding: 0.20em;}
+.menu { 
+	clear: both; margin-bottom: 2em; text-align: left; 
+	p { margin: 0.20em 0; padding: 0.20em 0.10em; }
+	ul { margin: 0; padding: 0; list-style: none; }
+	ul li {
+		 margin: 0.2em 0.7em 0.2em 0; 
+		 padding: 0.2em;}
+		}
+.navbar-inverse .nav  li  a{color:#B3B3B3}
 
 
 /* Pagination */
@@ -387,6 +401,9 @@ a { color: #4d4d4d; text-decoration: none; }
 a:focus,a:hover,a:active { text-decoration: underline; }
 .menu a.on{color: #000000;}
 
+.header .accueil a {
+    color: #B3B3B3;
+}
 
 .show .title{cursor:pointer; font-weight:bold;}
 
