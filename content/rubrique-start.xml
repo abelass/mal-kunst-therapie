@@ -1,0 +1,5 @@
+<composition>
+	<nom>Rubrik start</nom>
+	<description>Inhalt der Rubrik Start</description>
+	<branche type="article" composition="start" />
+</composition>
