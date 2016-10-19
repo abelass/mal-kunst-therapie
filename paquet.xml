@@ -11,6 +11,8 @@
 	<auteur lien='http://websimple.be'>Rainer Müller</auteur>
 
 	<licence>GNU/GPL</licence>
+	<lib nom="jquery.OnePageNav" lien="https://github.com/davist11/jQuery-One-Page-Nav/archive/master.zip"/>
+
 
 	<necessite nom="wsps_html5" compatibilite="[1.2.3;]" />  	
 	<necessite nom="cextras" compatibilite="[3.2.5;[" />	
