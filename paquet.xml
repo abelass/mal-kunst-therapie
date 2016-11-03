@@ -18,7 +18,8 @@
 	<necessite nom="cextras" compatibilite="[3.2.5;[" />	
 	<necessite nom="iextras" compatibilite="[3.1.0;[" />
 	<necessite nom="faq" compatibilite="[3.0.10;[" />
-	<necessite nom="gis" compatibilite="[4.41.3 ;[" />
+	<necessite nom="gis" compatibilite="[4.41.3;[" />
+	<necessite nom="seo" compatibilite="[2.1.5;[" />
 	
 	<utilise nom="bootstrap" compatibilite="[1.5.3;]" />
 	<utilise nom="spipr_dist" compatibilite="[0.4.3;]" />
