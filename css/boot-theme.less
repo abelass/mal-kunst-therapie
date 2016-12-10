@@ -103,17 +103,35 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 }
 
 /**
+ * General
+ */
+
+.principale .row [class*="span"] {
+	float:none;
+	margin: 0 auto;
+}
+
+/**
  * Sections
  */
 
+#content > section {
+	padding-top: 6.25em;
+	header {
+		text-align:center;
+		.texte strong {
+			font-size: 2.625em;
+			font-weight: normal;
+			margin-bottom: 1.25em;
+		}
+	}
+}
 // Start.
 #rubrique-1 {
-	text-align:center;
 	h1 {
 		display: none;
 	}
-	.texte strong {
-		font-size: 2.625em;
-		font-weight: normal;
+	.details {
+		background-color: #f4f4f4
 	}
 }
