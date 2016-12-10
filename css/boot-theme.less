@@ -28,6 +28,15 @@
 		font-style: normal;
 }
 
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('fonts/kaushan/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('fonts/kaushan/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @serifFontFamily:       open_sans;
 
 
@@ -38,6 +47,8 @@
 h1, h2, h3, h4, #rubrique-1 .texte strong {
 	color: @pink;
 	font-family: 'open_sanslight';
+	text-transform: uppercase;
+
 }
 
 /**
@@ -66,16 +77,22 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 
 // Navigation.
 .navbar-inner {
-	box-shadow:none;
+	box-shadow: none;
 }
 
-.navbar-inverse .nav > li.current > a {
-				color: #524860;
+.navbar-inverse .nav{
+	 > li.current > a {
+		color: #524860;
+	}
+	> li a {
+		text-shadow: none;
+	}
 }
 
 .navbar {
 	padding-top: 2.5em;
-		font-family: 'open_sanssemibold';
+	font-family: 'open_sanssemibold';
+	text-transform: uppercase;
 	.nav {
 		float: right;
 		margin: 0 2.5em 0 0;
@@ -90,8 +107,8 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 .navbar-inner.fixed {
 	background-color: #E6E6E4;
 	width: 100%!important;
+	left: 0!important;
 }
-
 
 #logo_site_spip {
 	font-size:0;
@@ -106,23 +123,41 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
  * General
  */
 
-.principale .row [class*="span"] {
+.principale .row > [class*="span"] {
 	float:none;
 	margin: 0 auto;
 }
+
+.slogan {
+	color: white;
+	text-align: center;
+	font-family: kaushan_scriptregular;
+	font-size: 2.875em;
+	line-height: 1em;
+	margin-top: -1em;
+	margin-bottom: 6em;
+}
+
 
 /**
  * Sections
  */
 
-#content > section {
-	padding-top: 6.25em;
-	header {
-		text-align:center;
-		.texte strong {
-			font-size: 2.625em;
-			font-weight: normal;
-			margin-bottom: 1.25em;
+#content {
+	> section {
+		padding-top: 6.25em;
+		header {
+			text-align: center;
+			.texte strong {
+				font-size: 2.625em;
+				font-weight: normal;
+				margin-bottom: 1.25em;
+			}
+		}
+		article {
+			header {
+				text-align: left;
+			}
 		}
 	}
 }
@@ -132,6 +167,44 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 		display: none;
 	}
 	.details {
-		background-color: #f4f4f4
+		margin-top: 6.25em;
+		padding: 6.25em 0;
+		article {
+			width: 66%;
+		}
+		article:first-child {
+			margin-bottom: 4.375em;
+		}
+		h2 {
+			text-align: left;
+		}
+	}
+}
+
+#rubrique-2 {
+	background: transparent url("images/klecks-top.jpg") no-repeat 0 0 ;
+	background-size: 100%;
+	.cartouche {
+		.spip_logos {
+			margin: 3.75em 0;
+			float:none;
+		}
+	}
+}
+
+#rubrique-3 {
+	background: transparent url("images/klecks-bottom.jpg") no-repeat 0 0 ;
+	background-size: 100%;
+	.slogan {
+		margin-bottom: 2em;
+		margin-top: 4.5em;
+		p {
+			margin-bottom: 0.5em
+		}
+		p:last-child {
+			font-size:0.347em;
+			font-family: @serifFontFamily;
+			line-height: normal;
+		}
 	}
 }
