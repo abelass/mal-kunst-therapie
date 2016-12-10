@@ -6,13 +6,29 @@
 
 @font-face {
 		font-family: 'open_sanssemibold';
-		src: url('opensans/opensans-semibold-webfont.woff2') format('woff2'),
-				 url('opensans/opensans-semibold-webfont.woff') format('woff');
+		src: url('fonts/opensans/opensans-semibold-webfont.woff2') format('woff2'),
+				 url('fonts/opensans/opensans-semibold-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
-
 }
-@serifFontFamily:       open_sanssemibold;
+
+@font-face {
+		font-family: 'open_sanslight';
+		src: url('fonts/opensans/opensans-light-webfont.woff2') format('woff2'),
+				 url('fonts/opensans/opensans-light-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+}
+
+@font-face {
+		font-family: 'open_sans';
+		src: url('fonts/opensans/opensans-regular-webfont.woff2') format('woff2'),
+				 url('fonts/opensans/opensans-regular-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+}
+
+@serifFontFamily:       open_sans;
 
 
 /**
@@ -21,6 +37,7 @@
 
 h1, h2, h3, h4, #rubrique-1 .texte strong {
 	color: @pink;
+	font-family: 'open_sanslight';
 }
 
 /**
@@ -58,6 +75,7 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 
 .navbar {
 	padding-top: 2.5em;
+		font-family: 'open_sanssemibold';
 	.nav {
 		float: right;
 		margin: 0 2.5em 0 0;
@@ -96,5 +114,6 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 	}
 	.texte strong {
 		font-size: 2.625em;
+		font-weight: normal;
 	}
 }
