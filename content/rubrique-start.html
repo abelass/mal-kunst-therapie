@@ -12,7 +12,7 @@
 	<div class="row">
 		<div class="span8">
 		<BOUCLE_articles(ARTICLES){id_rubrique}>
-			<INCLURE{fond=content/article, id_article, composition, env} />
+			<INCLURE{fond=content/article, id_article, composition=#COMPOSITION, type-page=article, env} />
 		</BOUCLE_articles>
 		</div>
 	</div>
