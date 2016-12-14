@@ -1,0 +1,5 @@
+<composition>
+	<nom>Rubrik Angebot</nom>
+	<description>Inhalt der Rubrik Angebot</description>
+	<branche type="article" composition="angebot" />
+</composition>
