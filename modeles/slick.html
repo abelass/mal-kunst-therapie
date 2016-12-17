@@ -1,0 +1,86 @@
+[(#REM) Modèle slick ]
+
+#SET{largeur, #ENV{largeur, 960}}
+#SET{hauteur, #ENV{hauteur, 320}}
+
+#SET{nombre, #ENV{nombre, 10}}
+
+#SET{fichiers,#ARRAY}
+
+<BOUCLE_documents_slide(DOCUMENTS)
+{id_article?}
+{id_rubrique?}
+{mode=DOCUMENT}
+{extension IN png,jpg,gif}
+{par num titre, date}
+{doublons}
+{vu=non}>
+		#SET{fichiers,#GET{fichiers}|push{#FICHIER}}
+</BOUCLE_documents_slide>
+
+<B_main>
+<div id="slider-main">
+<BOUCLE_main(DATA){source tableau,#GET{fichiers}}>
+	[<div>
+				(#VALEUR
+				|image_passe_partout{#GET{largeur},#GET{hauteur}}
+				|image_recadre{#GET{largeur},#GET{hauteur}})
+			</div>]
+</BOUCLE_main>
+</div>
+</B_main>
+<B_nav>
+<div id="slider-nav">
+<BOUCLE_nav(DATA){source tableau,#GET{fichiers}}>
+	[<div>
+				(#VALEUR
+				|image_passe_partout{250,250}
+				|image_recadre{250,250})
+			</div>]
+</BOUCLE_nav>
+</div>
+</B_nav>
+
+<script type="text/javascript">
+$(function () {
+	$('#slider-main').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '#slider-nav',
+		adaptiveHeight: true
+	});
+	$('#slider-nav').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '#slider-main',
+		dots: false,
+		centerMode: true,
+		focusOnSelect: true,
+		responsive: [
+								{
+									breakpoint: 768,
+									settings: {
+										arrows: false,
+										centerMode: true,
+										centerPadding: '40px',
+										slidesToShow: 3
+									}
+								},
+								{
+									breakpoint: 480,
+									settings: {
+										arrows: false,
+										centerMode: true,
+										centerPadding: '40px',
+										slidesToShow: 1
+									}
+								}
+							]
+	});
+});
+
+</script>

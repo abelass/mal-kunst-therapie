@@ -7,7 +7,7 @@
 @font-face {
 		font-family: 'open_sanssemibold';
 		src: url('fonts/opensans/opensans-semibold-webfont.woff2') format('woff2'),
-				 url('fonts/opensans/opensans-semibold-webfont.woff') format('woff');
+				url('fonts/opensans/opensans-semibold-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 }
@@ -15,7 +15,7 @@
 @font-face {
 		font-family: 'open_sanslight';
 		src: url('fonts/opensans/opensans-light-webfont.woff2') format('woff2'),
-				 url('fonts/opensans/opensans-light-webfont.woff') format('woff');
+				url('fonts/opensans/opensans-light-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 }
@@ -23,17 +23,17 @@
 @font-face {
 		font-family: 'open_sans';
 		src: url('fonts/opensans/opensans-regular-webfont.woff2') format('woff2'),
-				 url('fonts/opensans/opensans-regular-webfont.woff') format('woff');
+				url('fonts/opensans/opensans-regular-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 }
 
 @font-face {
-    font-family: 'kaushan_scriptregular';
-    src: url('fonts/kaushan/kaushanscript-regular-webfont.woff2') format('woff2'),
-         url('fonts/kaushan/kaushanscript-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+		font-family: 'kaushan_scriptregular';
+		src: url('fonts/kaushan/kaushanscript-regular-webfont.woff2') format('woff2'),
+				 url('fonts/kaushan/kaushanscript-regular-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
 
 }
 
@@ -85,7 +85,7 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 }
 
 .navbar-inverse .nav{
-	 > li.current > a {
+	> li.current > a {
 		color: #524860;
 	}
 	> li a {
@@ -219,5 +219,15 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 		margin-top: 3.75em;
 		padding-top: 3.75em;
 		border-top: @grayDark 2px solid;
+	}
+	.slick-prev::before, .slick-next::before {
+		color: black;
+	}
+	.slick-next {
+	right: 0.3125em;
+	}
+	.slick-prev {
+		left: 0;
+		z-index: 100;
 	}
 }
