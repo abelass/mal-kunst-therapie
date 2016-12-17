@@ -4,9 +4,11 @@
 		<header class="cartouche">
 			[<div class="#EDIT{descriptif} slogan">(#DESCRIPTIF)</div>]
 			<h1 class="#EDIT{titre}">#TITRE</h1>
-			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
 			[(#LOGO_RUBRIQUE|image_reduire{460})]
 		</header>
+		<div class="main">
+			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+		</div>
 		<B_articles>
 		<div class="row-fluid">
 		<BOUCLE_articles(ARTICLES){id_rubrique}>
