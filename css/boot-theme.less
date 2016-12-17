@@ -43,6 +43,9 @@ body {
 	line-height: 1.6em;
 }
 
+p {
+	hyphens: auto;
+}
 
 /**
  * Titles
@@ -190,7 +193,9 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 }
 
 #rubrique-2 {
-	background: transparent url("images/klecks-top.jpg") no-repeat 0 0 ;
+	background-image: url("images/klecks-top.jpg"), url("images/klecks-bottom.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 0, 0 100%;
 	background-size: 100%;
 	.cartouche {
 		.spip_logos {
@@ -198,14 +203,15 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 			float:none;
 		}
 	}
-}
-
-#rubrique-3 {
-	background: transparent url("images/klecks-bottom.jpg") no-repeat 0 0 ;
-	background-size: 100%;
-	.slogan {
-		margin-bottom: 2em;
-		margin-top: 4.5em;
+	.ps {
+		background-size: 100%;
+		margin-bottom: 1em;
+		margin-top: 6.5em;
+    color: white;
+    font-family: kaushan_scriptregular;
+    font-size: 2.875em;
+    line-height: 1em;
+    text-align: center;
 		p {
 			margin-bottom: 0.5em
 		}
@@ -215,6 +221,9 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 			line-height: normal;
 		}
 	}
+}
+
+#rubrique-3 {
 	.row-fluid {
 		margin-top: 3.75em;
 		padding-top: 3.75em;
@@ -230,4 +239,14 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 		left: 0;
 		z-index: 100;
 	}
+	.ps {
+		margin-top: 3.125em;
+		margin-bottom: 10em;
+	}
+	.row-fluid [class*="span"]:nth-child(odd){
+    margin-left: 0;
+	}
+	.row-fluid [class*="span"]:last-child {
+    float: left;
+    }
 }
