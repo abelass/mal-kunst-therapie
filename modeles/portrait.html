@@ -1,0 +1,35 @@
+#SET{images, #ARRAY{
+		0, #ARRAY{
+				image,backpack.png,
+				alt,Rucksack,
+			},
+		1, #ARRAY{
+				image,color.png,
+				alt,Farbtopf,
+			},
+		2, #ARRAY{
+				image,tree.png,
+				alt,Baum,
+			},
+		3, #ARRAY{
+				image,ghost.png,
+				alt,Geist,
+		},
+	}
+}
+
+#SET{items, #ENV{items}|explode{;}}
+
+<B_items>
+<div class="items row-fluid">
+<BOUCLE_items(DATA){source tableau, #GET{items}}>
+	<div class="item span3">
+		#SET{item, #VALEUR|explode{:}}
+		<img src="[(#CHEMIN{images/[(#GET{images}|table_valeur{#CLE}|table_valeur{image})]})]"
+			alt="[(#GET{images}|table_valeur{#CLE}|table_valeur{alt})]"/>
+		[<p class="numero">(#GET{item}|table_valeur{1})</p>]
+		[<p class="texte">(#GET{item}|table_valeur{0})</p>]
+	</div>
+</BOUCLE_items>
+</div>
+</B_items>

@@ -252,17 +252,39 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 }
 
 #rubrique-4 {
+	header {
+		img {
+			margin-bottom: 1.875em;
+		}
+		margin-bottom: 3.75em;
+	}
 	ul, ol {
 		margin-left: 1.875em;
 	}
 	.main {
-		p, ul {
-			display: inline-block;
-			width: 48%;
-			vertical-align:top;
+		.texte {
+			> p, ul {
+				width: 48%;
+				vertical-align:top;
+				float: left;
+			}
+			> p:nth-of-type(3) {
+				float:right;
+			}
 		}
-		p:last-child {
-			margin-left: 3%;
+	}
+	.items {
+		text-align:center;
+		text-transform: uppercase;
+		font-weight: bold;
+		clear: both;
+		.numero {
+			font-family: kaushan_scriptregular;
+			font-size: 2.875em;
+			margin: 0.5em 0;
+		}
+		p {
+			width: 100%;
 		}
 	}
 }
