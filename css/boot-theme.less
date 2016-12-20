@@ -302,12 +302,10 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 	}
 	dl.faq {
 		text-align: center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		dt {
-			color: #1f3455;
-			display: inline-block;
-			font-size: 1.75em;
-			font-family: open_sanslight;
-			text-transform: italic;
 			padding: 2em 0;
 		}
 		dt:nth-of-type(1) {
@@ -322,5 +320,17 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 			background-color: #d297af;
 			width: 40%;
 		}
+		dd {
+			display: none;
+		}
+	}
+}
+
+dl.faq, dl.answer-modal {
+	dt {
+		color: #1f3455;
+		font-size: 1.75em;
+		font-family: open_sanslight;
+		text-transform: italic;
 	}
 }

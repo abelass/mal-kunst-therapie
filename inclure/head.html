@@ -59,19 +59,30 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#nav-menu').onePageNav();
-  });
-$('.navbar-inner').makeFixed({
-	  onFixed: function (el)
-	  {
-			$(el).addClass('fixed');
-	  },
-	  onUnFixed: function (el)
-	  {
-	  	$(el).removeClass('fixed');
-	  }
+		$('#nav-menu').onePageNav();
+
+		$('.faq dt').click(function(){
+			var question = $(this).text();
+			var answer = $(this).next('dd').text()
+			$.modalboxload('',{html:'<dl class="answer-modal"><dt>' + question + '</dt>' + '<dd>' + answer + '</dd></dl>'});
+		});
 	});
+
+$('.navbar-inner').makeFixed({
+		onFixed: function (el)
+		{
+			$(el).addClass('fixed');
+		},
+		onUnFixed: function (el)
+		{
+			$(el).removeClass('fixed');
+		}
+	});
+
+
+
 </script>
+
 
 <!--[if lt IE 9]>
 [<script src="(#CHEMIN{js/html5.js})"></script>]
