@@ -29,12 +29,19 @@
 }
 
 @font-face {
+    font-family: 'open_sansitalic';
+    src: url('fonts/opensans/opensans-italic-webfont.woff2') format('woff2'),
+         url('fonts/opensans/opensans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
 		font-family: 'kaushan_scriptregular';
 		src: url('fonts/kaushan/kaushanscript-regular-webfont.woff2') format('woff2'),
 				url('fonts/kaushan/kaushanscript-regular-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
-
 }
 
 @serifFontFamily:       open_sans;
@@ -297,16 +304,21 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 
 #rubrique-5 {
 	background-color: #492d43;
-	h1 {
-		color: @white;
-	}
 	dl.faq {
 		text-align: center;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		dt, dd {
+			span {
+				padding: 4em 0.5em;
+				display: inline-block;
+			}
+		}
 		dt {
-			padding: 2em 0;
+			padding: 0;
+			cursor: pointer;
+			width: 40%;
 		}
 		dt:nth-of-type(1) {
 			background-color: #c6d5e2;
@@ -318,7 +330,17 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 		}
 		dt:nth-of-type(3) {
 			background-color: #d297af;
-			width: 40%;
+		}
+		dt:nth-of-type(4) {
+			background-color: #a68a93;
+		}
+		dt:nth-of-type(5) {
+			background-color: #c18682;
+			width: 27%;
+		}
+		dt:nth-of-type(6) {
+			background-color: #bedaf2;
+			width: 33%;
 		}
 		dd {
 			display: none;
@@ -330,7 +352,9 @@ dl.faq, dl.answer-modal {
 	dt {
 		color: #1f3455;
 		font-size: 1.75em;
-		font-family: open_sanslight;
+		font-family: open_sansitalic;
 		text-transform: italic;
+		line-height: normal;
+		font-weight: normal;
 	}
 }
