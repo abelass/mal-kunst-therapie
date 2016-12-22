@@ -54,7 +54,11 @@ p {
 	hyphens: auto;
 }
 
-
+#content {
+	a {
+		font-weight:bold;
+	}
+}
 /**
  * Titles
  */
@@ -63,7 +67,10 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 	color: @pink;
 	font-family: 'open_sanslight';
 	text-transform: uppercase;
+}
 
+h1, .h1, .h1-like {
+	font-size: 2.625em;
 }
 
 /**
@@ -403,17 +410,27 @@ section#rubrique-5 {
 	}
 }
 
-#content .end {
-	background: #d297af url(images/bg_contact.jpg) no-repeat;
-	background-size: cover;
-	color: #1f3455;
-	padding-top: 6.25em;
-	.footer {
-		float: none;
-		margin: 4em auto 0;
-		padding-bottom: 6.25em;
-		padding-top: 1.25em;
-		text-align: right;
+#rubrique-6 {
+	padding-bottom: 6.25em;
+	h1 {
+		color: @grayDark;
+		text-align: left;
+	}
+	.main {
+		.texte {
+			-moz-column-count: 2;
+			-webkit-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 2.5em;
+			-moz-column-gap: 2.5em;
+			column-gap: 2.5em;
+			p {
+				-webkit-column-break-inside: avoid;
+				page-break-inside: avoid;
+			}
+		}
+
+
 	}
 }
 
@@ -430,6 +447,20 @@ section#rubrique-5 {
 	}
 	.carte_gis {
 		border: #F6F5F5 0.7em solid;
+	}
+}
+
+#content .end {
+	background: #d297af url(images/bg_contact.jpg) no-repeat;
+	background-size: cover;
+	color: #1f3455;
+	padding-top: 6.25em;
+	.footer {
+		float: none;
+		margin: 4em auto 0;
+		padding-bottom: 6.25em;
+		padding-top: 1.25em;
+		text-align: right;
 	}
 }
 
