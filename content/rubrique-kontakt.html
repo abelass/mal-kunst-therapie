@@ -1,0 +1,45 @@
+<BOUCLE_content(RUBRIQUES){id_rubrique}{gis}{tout}{par num titre}>
+<div class="row">
+	<div class="span8">
+		<div class="main">
+			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+			<div class="row-fluid">
+				<div class="span4">
+				<header class="cartouche">
+					[<div class="#EDIT{descriptif} slogan">(#DESCRIPTIF)</div>]
+					<h1 class="#EDIT{titre}">#TITRE</h1>
+				</header>
+					[<p class=" titre">(#TITRE_GIS)</p>]
+					[<p class="descriptif">(#DESCRIPTIF_GIS)</p>]
+					[<p class="adresse">(#ADRESSE_GIS)</p>]
+					[<p class="ville">(#VILLE)</p>]
+					<p class="email">[(#VAL{<a href="mailto:#EMAIL_WEBMASTER">#EMAIL_WEBMASTER</a>}|mailcrypt)]</p>
+				</div>
+				<div class="span8">
+					<INCLURE{fond=modeles/carte_gis,autocenterandzoom=oui,zoom=18,id_rubrique,objets=rubriques}/>
+				</div>
+			</div>
+
+
+		</div>
+		<B_articles>
+		<div class="row-fluid">
+		<BOUCLE_articles(ARTICLES){id_rubrique}>
+			<div class="span6[ (#COMPOSITION|sinon{article})]">
+				<INCLURE{fond=content/article, id_article, composition=#COMPOSITION, type-page=article, env} />
+			</div>
+		</BOUCLE_articles>
+		</div>
+		</B_articles>
+		[<aside>
+			[(#REM) Gestion du portfolio et des documents ]
+			(#INCLURE{fond=inclure/documents,id_rubrique})
+		</aside>]
+
+		<footer>
+		[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+		[<div class="#EDIT{ps} ps">(#PS)</div>]
+		</footer>
+	</div>
+</div>
+</BOUCLE_content>
