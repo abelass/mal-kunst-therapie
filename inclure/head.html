@@ -59,14 +59,18 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-		$('#nav-menu').onePageNav();
+	$('#nav-menu').onePageNav();
 
-		$('.faq dt').click(function(){
-			var question = $(this).text();
-			var answer = $(this).next('dd').text()
-			$.modalboxload('',{html:'<dl class="answer-modal"><dt>' + question + '</dt>' + '<dd>' + answer + '</dd></dl>'});
-		});
+	$('.faq').on('click', 'dt', function(){
+		var question = $(this).text();
+		var answer = $(this).next('dd').text()
+		$('.faq').append('<div class="modal"><span class="close">x</span><dl><dt>' + question + '</dt>' + '<dd>' + answer + '</dd></dl>');
 	});
+	$('body').on('click', '.close', function(){
+		$('.modal').remove();
+	});
+
+});
 
 $('.navbar-inner').makeFixed({
 		onFixed: function (el)

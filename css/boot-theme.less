@@ -54,6 +54,7 @@ p {
 	hyphens: auto;
 }
 
+
 /**
  * Titles
  */
@@ -302,59 +303,104 @@ h1, h2, h3, h4, #rubrique-1 .texte strong {
 	}
 }
 
-#rubrique-5 {
+section#rubrique-5 {
 	background-color: #492d43;
-	dl.faq {
-		text-align: center;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		dt, dd {
-			span {
-				padding: 4em 0.5em;
-				display: inline-block;
+	padding-top: 3.125em;
+	padding-bottom: 9.375em;
+	h1 {
+		text-align: left;
+		color: white;
+		margin-bottom: 1.25em;
+	}
+	.faq {
+		position: relative;
+		dl {
+			text-align: center;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			dt, dd {
+				span {
+					padding: 4em 0.5em;
+					display: inline-block;
+				}
+			}
+			dt {
+				padding: 0;
+				cursor: pointer;
+				width: 40%;
+				color: #1f3455;
+				font-size: 1.75em;
+				font-family: open_sansitalic;
+				text-transform: italic;
+				line-height: normal;
+				font-weight: normal;
+			}
+			dt:nth-of-type(1) {
+				background-color: #c6d5e2;
+				width: 25%
+			}
+			dt:nth-of-type(2) {
+				background-color: #ac6e85;
+				width: 35%;
+			}
+			dt:nth-of-type(3) {
+				background-color: #d297af;
+			}
+			dt:nth-of-type(4) {
+				background-color: #a68a93;
+			}
+			dt:nth-of-type(5) {
+				background-color: #c18682;
+				width: 27%;
+			}
+			dt:nth-of-type(6) {
+				background-color: #bedaf2;
+				width: 33%;
+			}
+			dd {
+				display: none;
 			}
 		}
-		dt {
-			padding: 0;
-			cursor: pointer;
-			width: 40%;
-		}
-		dt:nth-of-type(1) {
+		.modal {
+			width: 100%;
 			background-color: #c6d5e2;
-			width: 25%
-		}
-		dt:nth-of-type(2) {
-			background-color: #ac6e85;
-			width: 35%;
-		}
-		dt:nth-of-type(3) {
-			background-color: #d297af;
-		}
-		dt:nth-of-type(4) {
-			background-color: #a68a93;
-		}
-		dt:nth-of-type(5) {
-			background-color: #c18682;
-			width: 27%;
-		}
-		dt:nth-of-type(6) {
-			background-color: #bedaf2;
-			width: 33%;
-		}
-		dd {
-			display: none;
+			border-radius: 0;
+			height: 100%;
+			left: 0;
+			margin-left: 0;
+			position: absolute;
+			top: 0;
+			align-items: center;
+			display: flex;
+			.close {
+				font-size: 4em;
+				position: absolute;
+				right: 0.2em;
+				top: 0.3em;
+				color: #492d43;
+				font-weight: normal;
+				opacity: 1;
+				float: none;
+				font-family: open_sanslight;
+			}
+			dl {
+				padding: 0 2.5em;
+				display: block;
+			}
+			dt {
+				text-align: left
+			}
+			dt:nth-of-type(1) {
+				width: 100%
+			}
+			dd {
+				display: block;
+				padding: 0;
+				text-align: left;
+			}
 		}
 	}
 }
 
-dl.faq, dl.answer-modal {
-	dt {
-		color: #1f3455;
-		font-size: 1.75em;
-		font-family: open_sansitalic;
-		text-transform: italic;
-		line-height: normal;
-		font-weight: normal;
-	}
-}
+
