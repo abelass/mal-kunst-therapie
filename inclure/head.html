@@ -94,9 +94,11 @@ $('.navbar-inner').makeFixed({
 <![endif]-->
 
 <style>
-	#rubrique-1 .details {
-		background-image: url([(#CHEMIN{IMG/rubon1.jpg}
-		|image_reduire{750}
-		|extraire_attribut{src})]);
+	@media (min-width: 768px) {
+		#rubrique-1 .details {
+			background-image: url([(#CHEMIN{IMG/rubon1.jpg}
+			|image_reduire{750}
+			|extraire_attribut{src})]);
+		}
 	}
 </style>
