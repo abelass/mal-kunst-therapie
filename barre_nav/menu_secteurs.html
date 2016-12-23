@@ -1,11 +1,15 @@
-<B_rubriques>
 <div class="menu menu-container navbar-inner">
   <ul class="menu-items menu-liste nav" id="nav-menu">
-	 <BOUCLE_rubriques(RUBRIQUES) {racine} {par num titre, titre}{tout}>
+<B_rubriques>
+	 <BOUCLE_rubriques(RUBRIQUES) {racine} {par num titre, titre}{tout}{si #ENV{type-page}|=={sommaire}|oui}>
 		<li class="item menu-entree[ (#EXPOSE)]">
 			<a href="#rubrique-#ID_RUBRIQUE">[(#TITRE|couper{80})]</a>
 		</li>
 	 </BOUCLE_rubriques>
-	 </ul>
-</div>	
 </B_rubriques>
+		<li class="item menu-entree[ (#EXPOSE)]">
+			<a href="/">Start</a>
+		</li>
+<//B_rubriques>
+	 </ul>
+</div>
