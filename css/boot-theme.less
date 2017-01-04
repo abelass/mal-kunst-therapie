@@ -229,6 +229,11 @@ h1, .h1, .h1-like {
 			hyphens: none;
 		}
 	}
+	.span8 .span6:last-child{
+		article{
+			padding-left: 1em;
+		}
+	}
 	.ps {
 		background-size: 100%;
 		margin-bottom: 1em;
@@ -256,11 +261,18 @@ h1, .h1, .h1-like {
 		padding-top: 3.75em;
 		border-top: @grayDark 2px solid;
 	}
+	.slick-prev, .slick-next {
+		width: 40px;
+		height: 40px;
+		transform: translate(-45px, -50%);
+	}
 	.slick-prev::before, .slick-next::before {
 		color: black;
+		font-size: 40px
 	}
 	.slick-next {
 	right: 0.3125em;
+	transform: translate(45px, -50%);
 	}
 	.slick-prev {
 		left: 0;
