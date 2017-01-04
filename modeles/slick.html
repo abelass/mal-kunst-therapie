@@ -1,6 +1,6 @@
 [(#REM) Modèle slick ]
 
-#SET{largeur, #ENV{largeur, 960}}
+#SET{largeur, #ENV{largeur, *}}
 #SET{hauteur, #ENV{hauteur, 320}}
 
 #SET{nombre, #ENV{nombre, 10}}
@@ -23,7 +23,7 @@
 <BOUCLE_main(DATA){source tableau,#GET{fichiers}}>
 	[<div>
 				(#VALEUR
-				|image_reduire{#GET{largeur},#GET{hauteur}}
+				|image_reduire{#GET{largeur},#GET{hauteur}})
 			</div>]
 </BOUCLE_main>
 </div>
