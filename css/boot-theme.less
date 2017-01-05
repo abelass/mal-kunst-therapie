@@ -31,7 +31,7 @@
 @font-face {
 		font-family: 'open_sansitalic';
 		src: url('fonts/opensans/opensans-italic-webfont.woff2') format('woff2'),
-				 url('fonts/opensans/opensans-italic-webfont.woff') format('woff');
+				url('fonts/opensans/opensans-italic-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 }
@@ -65,6 +65,10 @@ ul.spip {
 	a {
 		font-weight:bold;
 	}
+}
+
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+		width: 100%!important;
 }
 /**
  * Titles
@@ -602,6 +606,32 @@ section#rubrique-5 {
 	#content .end {
 		padding: 0;
 	}
+
+	section#rubrique-5 {
+		.faq {
+			dl {
+				dt,
+				dt:nth-of-type(1),
+				dt:nth-of-type(2),
+				dt:nth-of-type(5),
+				dt:nth-of-type(6) {
+					width: 100%;
+				}
+			}
+			.modal {
+				height: auto;
+				padding: 1em 0;
+				display:block;
+				position: fixed;
+				.close {
+					font-size: 2em;
+					left: 0.5em;
+					right: 100%;
+				}
+			}
+		}
+	}
+
 	section#rubrique-7 {
 		padding-top: 2em;
 		margin-top: 2em;
@@ -637,29 +667,11 @@ section#rubrique-5 {
 	section#rubrique-5 {
 		.faq {
 			dl {
-				dt,
-				dt:nth-of-type(1),
-				dt:nth-of-type(2),
-				dt:nth-of-type(5),
-				dt:nth-of-type(6) {
-					width: 100%;
-				}
 				dt {
 					font-size: 1.3em;
 					span {
 						padding: 1em 0.5em;
 					}
-				}
-			}
-			.modal {
-				height: auto;
-				padding: 1em 0;
-				display:block;
-				position: fixed;
-				.close {
-					font-size: 2em;
-					left: 0.5em;
-					right: 100%;
 				}
 			}
 		}
