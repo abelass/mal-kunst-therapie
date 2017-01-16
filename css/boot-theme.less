@@ -185,7 +185,7 @@ h1, .h1, .h1-like {
 				width: 65%;
 			}
 			.texte strong {
-				font-size: 2.625em;
+				font-size: 2.425em;
 				font-weight: normal;
 				margin-bottom: 1.25em;
 			}
@@ -244,11 +244,11 @@ h1, .h1, .h1-like {
 	}
 	.ps {
 		background-size: 100%;
-		margin-bottom: 1em;
-		margin-top: 6.5em;
+		margin-bottom: 1%;
+		margin-top: 30%;
 		color: white;
 		font-family: kaushan_scriptregular;
-		font-size: 2.875em;
+		font-size: 2.475em;
 		line-height: 1em;
 		text-align: center;
 		p {
@@ -287,7 +287,7 @@ h1, .h1, .h1-like {
 		z-index: 100;
 	}
 	.ps {
-		margin-top: 3.125em;
+		margin-top: 0;
 		margin-bottom: 10em;
 	}
 	.row-fluid [class*="span"]:nth-child(odd){
@@ -506,6 +506,13 @@ section#rubrique-5 {
 }
 
 // Responsive
+@media (min-width: 1200px) {
+	#rubrique-2 .ps {
+		font-size: 2.875em;
+		margin-top: 40%;
+	}
+}
+
 @media (max-width: 1200px) {
 	.span8 {
 		width: 980px;
@@ -532,7 +539,7 @@ section#rubrique-5 {
 		padding-bottom: 0;
 	}
 	#rubrique-2 .ps {
-		margin-top: 3.5em;
+		font-size: 2.175em;
 		margin-bottom:0;
 		line-height: 0.9em;
 	}
@@ -583,10 +590,10 @@ section#rubrique-5 {
 	#rubrique-2 {
 		background: none;
 		.slogan {
-			display:none;
+			display: none;
 		}
 		.ps {
-			display:none;
+			display: none;
 		}
 	}
 	#rubrique-3{

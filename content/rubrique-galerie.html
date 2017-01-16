@@ -1,0 +1,20 @@
+<BOUCLE_content(RUBRIQUES){id_rubrique}{tout}{par num titre}>
+<div class="row">
+	<div class="span8">
+		<header class="cartouche">
+			[<div class="#EDIT{descriptif} slogan">(#DESCRIPTIF)</div>]
+			<h1 class="#EDIT{titre}">#TITRE</h1>
+			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+		</header>
+		</B_articles>
+		[<aside>
+			[(#REM) Gestion du portfolio et des documents ]
+			(#MODELE{slick, id_rubrique, largeur=*, hauteur=600})
+		</aside>]
+
+		[<footer>
+		<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>
+		</footer>]
+	</div>
+</div>
+</BOUCLE_content>

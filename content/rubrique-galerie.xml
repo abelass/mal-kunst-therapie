@@ -1,0 +1,5 @@
+<composition>
+	<nom>Rubrik Therapien un Presise</nom>
+	<description>Inhalt der Rubrik Therapien un Preise</description>
+	<branche type="article" composition="angebot" />
+</composition>
