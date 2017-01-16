@@ -262,13 +262,8 @@ h1, .h1, .h1-like {
 	}
 }
 
-// Therapien und Preise
-#rubrique-3 {
-	.row-fluid {
-		margin-top: 3.75em;
-		padding-top: 3.75em;
-		border-top: @grayDark 2px solid;
-	}
+// Fotogalerie
+#rubrique-9 {
 	.slick-prev, .slick-next {
 		width: 40px;
 		height: 40px;
@@ -286,9 +281,18 @@ h1, .h1, .h1-like {
 		left: 0;
 		z-index: 100;
 	}
+}
+
+// Therapien und Preise
+#rubrique-3 {
+	.row-fluid {
+		margin-top: 3.75em;
+		padding-top: 3.75em;
+		border-top: @grayDark 2px solid;
+	}
 	.ps {
 		margin-top: 0;
-		margin-bottom: 10em;
+		margin-bottom: 0;
 	}
 	.row-fluid [class*="span"]:nth-child(odd){
 		margin-left: 0;
@@ -316,17 +320,19 @@ h1, .h1, .h1-like {
 		}
 	}
 	.main {
+		display: table;
 		.texte {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
 			> p, ul {
-				width: 47%;
-				vertical-align:top;
-				float: left;
+				width: 48%;
 			}
-			> p:nth-of-type(2) {
-				clear: both;
+			> p:nth-of-type(3), ul {
+				margin-left: 1.5em;
 			}
-			> p:nth-of-type(3), > p:nth-of-type(1) {
-				float:right;
+			li {
+				 margin-bottom: 0.3em;
 			}
 		}
 	}
@@ -345,6 +351,7 @@ h1, .h1, .h1-like {
 		}
 	}
 }
+
 
 // Fragen.
 section#rubrique-5 {
@@ -465,6 +472,7 @@ section#rubrique-5 {
 			p {
 				-webkit-column-break-inside: avoid;
 				page-break-inside: avoid;
+				display: inline-block;
 			}
 		}
 	}
@@ -595,6 +603,9 @@ section#rubrique-5 {
 		.ps {
 			display: none;
 		}
+	.span8 .span6:last-child article {
+    padding-left: 0;
+}
 	}
 	#rubrique-3{
 	.angebot {
@@ -606,6 +617,25 @@ section#rubrique-5 {
 		}
 	}
 	#rubrique-4 {
+		.main {
+			.texte {
+				align-items: flex-start;
+				p:nth-of-type(1) {
+				order: 1;
+				margin: 0 auto;
+				}
+				ul {
+					order: 2;
+					width: 100%;
+				}
+				p:nth-of-type(2) {
+					order: 3;
+				}
+				p:nth-of-type(3) {
+					order: 4;
+				}
+			}
+		}
 		.items {
 			display:none;
 		}
