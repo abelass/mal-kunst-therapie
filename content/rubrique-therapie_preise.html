@@ -9,7 +9,7 @@
 		</header>
 		<B_articles>
 		<div class="row-fluid">
-		<BOUCLE_articles(ARTICLES){id_rubrique}>
+		<BOUCLE_articles(ARTICLES){id_rubrique}{par num titre}>
 			<div class="span6[ (#COMPOSITION|sinon{article})]">
 				<INCLURE{fond=content/article, id_article, composition=#COMPOSITION, type-page=article, env} />
 			</div>
