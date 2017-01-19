@@ -102,7 +102,7 @@ h1, .h1, .h1-like {
  */
 
 #header {
-	background: transparent url(images/title.jpg) center center no-repeat;
+	background: transparent url(images/title.jpg) center 0 no-repeat fixed;
 	background-size: cover;
 	min-height: 38.125em;
 }
@@ -208,7 +208,7 @@ h1, .h1, .h1-like {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-color:  #f4f4f4;
-		background-position: 100% 50%;
+		background-position: 120% 50%;
 
 		article {
 			width: 66%;
@@ -227,6 +227,7 @@ h1, .h1, .h1-like {
 	background-image: url("images/klecks-top.jpg"), url("images/klecks-bottom.jpg");
 	background-repeat: no-repeat;
 	background-position: 0 0, 0 100%;
+	background-attachement: fixed;
 	background-size: 100%;
 	.cartouche {
 		.spip_logos {
@@ -525,13 +526,19 @@ section#rubrique-5 {
 	}
 }
 
+@media (max-width: 1300px) {
+	#rubrique-1 .details {
+		background-position: 160% 50%;
+	}
+}
+
 @media (max-width: 1200px) {
 	.span8 {
 		width: 980px;
 	}
 
 	#rubrique-1 .details {
-		background-position: 140% 58%;
+		background-position: 170% 50%;
 	}
 
 	section#rubrique-5 .faq dl dt span, section#rubrique-5 .faq dl dd span {
@@ -556,6 +563,8 @@ section#rubrique-5 {
 		line-height: 0.9em;
 	}
 }
+
+
 
 @media (min-width: 768px) {
 	.navbar-inner.fixed {
