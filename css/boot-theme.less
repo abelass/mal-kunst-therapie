@@ -44,6 +44,15 @@
 		font-style: normal;
 }
 
+@font-face {
+		font-family: 'permanent_markerregular';
+		src: url('fonts/permanentmarker/permanentmarker-webfont.woff2') format('woff2'),
+				 url('fonts/permanentmarker/permanentmarker-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+
+}
+
 @serifFontFamily:       open_sans;
 
 body {
@@ -230,11 +239,11 @@ section#rubrique-2 {
 		background-image: url("images/klecks-top.jpg");
 		background-position: top;
 		.slogan {
-		    margin-bottom: 0;
-		    padding-bottom: 6em;
-		    margin-top: 0;
-		    padding-top: -1em;
-		    text-align: center;
+				margin-bottom: 0;
+				padding-bottom: 6em;
+				margin-top: 0;
+				padding-top: -1em;
+				text-align: center;
 		}
 		.span8 {
 			padding-top: 2.25em;
@@ -360,7 +369,7 @@ section#rubrique-9 {
 		}
 	}
 	.main {
-		.texte {
+		> .texte {
 			display: flex;
 			flex-flow: row wrap;
 			align-items: center;
@@ -369,7 +378,7 @@ section#rubrique-9 {
 				margin:auto;
 			}
 			li {
-				 margin-bottom: 0.4em;
+				margin-bottom: 0.4em;
 			}
 		}
 	}
@@ -379,7 +388,7 @@ section#rubrique-9 {
 		font-weight: bold;
 		clear: both;
 		.numero {
-			font-family: kaushan_scriptregular;
+			font-family: permanent_markerregular;
 			font-size: 2.875em;
 			margin: 0.5em 0;
 		}
@@ -654,7 +663,7 @@ section#rubrique-5 {
 			display: none;
 		}
 	.span8 .span6:last-child article {
-    padding-left: 0;
+		padding-left: 0;
 }
 	}
 	#rubrique-3{
