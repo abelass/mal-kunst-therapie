@@ -1,12 +1,18 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}{par num titre}>
 <div class="row">
-	<div class="span8">
-		<header class="cartouche">
-			[<div class="#EDIT{descriptif} slogan">(#DESCRIPTIF)</div>]
+	<header class="cartouche">
+		<div class="background-top">
+			<div class="span8">
+				[<div class="#EDIT{descriptif} slogan">(#DESCRIPTIF)</div>]
+			</div>
+		</div>
+		<div class="span8">
 			<h1 class="#EDIT{titre}">#TITRE</h1>
 			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
 			[(#LOGO_RUBRIQUE|image_reduire{460})]
-		</header>
+		</div>
+	</header>
+	<div class="span8">
 		<B_articles>
 		<div class="row-fluid">
 		<BOUCLE_articles(ARTICLES){id_rubrique}>
@@ -23,8 +29,11 @@
 
 		<footer>
 		[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
-		[<div class="#EDIT{ps} ps">(#PS)</div>]
 		</footer>
 	</div>
+</div>
+
+<div class="row pied">
+	[<div class="#EDIT{ps} ps span8">(#PS)</div>]
 </div>
 </BOUCLE_content>
