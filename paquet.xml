@@ -13,7 +13,7 @@
 	<licence>GNU/GPL</licence>
 	<lib nom="jquery.OnePageNav" lien="https://github.com/davist11/jQuery-One-Page-Nav/archive/master.zip"/>
 	<lib nom="makefixed" lien="https://github.com/guimadaleno/makefixed.js/archive/master.zip"/>
-	<lib nom="jquery-parallax-1.1.3" lien="https://github.com/IanLunn/jquery-parallax-1.1.3/archive/master.zip"/>
+	<lib nom="jquery-parallax-1.1.3" lien="https://github.com/IanLunn/jQuery-Parallax/archive/master.zip"/>
 
 	<necessite nom="wsps_html5" compatibilite="[1.2.3;]" />
 	<necessite nom="cextras" compatibilite="[3.2.5;[" />
