@@ -111,7 +111,7 @@ h1, .h1, .h1-like {
  */
 
 #header {
-	background: transparent url(images/title.jpg) center 0 no-repeat fixed;
+	background: transparent url(images/title.jpg) center 0 no-repeat scroll;
 	background-size: cover;
 	min-height: 38.125em;
 }
@@ -179,6 +179,16 @@ h1, .h1, .h1-like {
 	margin: 0 auto;
 }
 
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 1em;
+	.item {
+		width: 48%;
+		margin-left: 1em;
+	}
+}
+
 
 /**
  * Sections
@@ -218,7 +228,6 @@ h1, .h1, .h1-like {
 		background-repeat: no-repeat;
 		background-color:  #f4f4f4;
 		background-position: 120% 50%;
-		background-attachment : fixed;
 
 		article {
 			width: 66%;
@@ -571,6 +580,7 @@ section#rubrique-5 {
 }
 
 @media (max-width: 1200px) {
+
 	.span8 {
 		width: 980px;
 	}
@@ -584,11 +594,22 @@ section#rubrique-5 {
 	}
 }
 
+
+
 @media (max-width: 979px) {
 	#content > section, section#rubrique-7, .end {
-		padding: 4em 1em 0 2em;
+		padding: 4em 0 0 ;
 		.row > .span8 {
 			width: 98%;
+		}
+	}
+
+	#rubrique-1 {
+		.details {
+			background-image: none;
+			article {
+				width: 98%;
+			}
 		}
 	}
 
@@ -597,7 +618,7 @@ section#rubrique-5 {
 		padding-top: 0;
 		.slogan {
 			margin-bottom: 0;
-			padding-bottom: 2em;
+			padding-bottom: 4em;
 			font-size: 2em;
 		}
 		.ps {
@@ -655,7 +676,9 @@ section#rubrique-5 {
 		}
 	}
 	section#rubrique-2 {
-		.background-top,  .pied {
+		background: none;
+		display: none;
+		.pied {
 			background: none;
 			display: none;
 		}

@@ -8,9 +8,9 @@
 			[(#LOGO_RUBRIQUE|image_reduire{460})]
 		</header>
 		<B_articles>
-		<div class="row-fluid">
+		<div class="grid">
 		<BOUCLE_articles(ARTICLES){id_rubrique}{par num titre}>
-			<div class="span6[ (#COMPOSITION|sinon{article})]">
+			<div class="item[ (#COMPOSITION|sinon{article})]">
 				<INCLURE{fond=content/article, id_article, composition=#COMPOSITION, type-page=article, env} />
 			</div>
 		</BOUCLE_articles>
