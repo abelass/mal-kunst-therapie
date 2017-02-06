@@ -7,12 +7,16 @@
 
 #SET{fichiers,#ARRAY}
 
+[(#REM) On peut arriver avec id_article ou id_rubrique. On les réaffecte sur objet, id_objet. ]
+[(#ENV{id_article}|oui)[(#VAL{article}|setenv{objet})][(#ENV{id_article}|setenv{id_objet})]]
+[(#ENV{id_rubrique}|oui)[(#VAL{rubrique}|setenv{objet})][(#ENV{id_rubrique}|setenv{id_objet})]]
+
 <BOUCLE_documents_slide(DOCUMENTS)
-{id_article?}
-{id_rubrique?}
+{objet?}
+{id_objet?}
 {tout}
 {extension IN png,jpg,gif}
-{par spip_documents_liens.rang_lien, num titre, date}
+{par rang_lien, num titre, date}
 {inverse}
 {doublons}
 {vu=non}>
@@ -22,10 +26,7 @@
 <B_main>
 <div id="slider-main">
 <BOUCLE_main(DATA){source tableau,#GET{fichiers}}>
-	[<div>
-				(#VALEUR
-				|image_reduire{#GET{largeur},#GET{hauteur}})
-			</div>]
+	[<div>(#VALEUR|image_reduire{#GET{largeur},#GET{hauteur}})</div>]
 </BOUCLE_main>
 </div>
 </B_main>
