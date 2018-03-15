@@ -47,7 +47,7 @@
 @font-face {
 		font-family: 'permanent_markerregular';
 		src: url('fonts/permanentmarker/permanentmarker-webfont.woff2') format('woff2'),
-				 url('fonts/permanentmarker/permanentmarker-webfont.woff') format('woff');
+				url('fonts/permanentmarker/permanentmarker-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 
@@ -136,6 +136,10 @@ h1, .h1, .h1-like {
 	margin-bottom: 2.8em;
 	font-family: 'open_sanssemibold';
 	text-transform: uppercase;
+	.affix {
+		top: 0;
+		z-index: 500;
+	}
 	.nav {
 		float: right;
 		margin: 0 2.5em 0 0;
@@ -678,7 +682,7 @@ section#rubrique-5 {
 }
 
 @media (min-width: 768px) {
-	.navbar-inner.fixed {
+	.navbar-inner.affix {
 		background-color: #E6E6E4;
 		width: 100%!important;
 		left: 0!important;
