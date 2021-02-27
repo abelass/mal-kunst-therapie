@@ -618,7 +618,6 @@ section#rubrique-5 {
 }
 
 @media (max-width: 1200px) {
-
 	.span8 {
 		width: 980px;
 	}
@@ -631,8 +630,6 @@ section#rubrique-5 {
 		padding: 2em 0.5em;
 	}
 }
-
-
 
 @media (max-width: 979px) {
 	.grid .item {
@@ -695,16 +692,28 @@ section#rubrique-5 {
 		}
 	}
 	#header {
-		padding: 2em;
+		padding: 0 2em 1em 2em;
 		min-height: auto;
 	}
 
-	.navbar-responsive.navbar-inverse .navbar-inner .nav-collapse {
-		background-color: #E6E6E4;
-		text-align: right;
+	.navbar-responsive {
+		position: fixed;
+		z-index: 1000;
+		&.navbar-inverse .navbar-inner .nav-collapse {
+			background-color: #E6E6E4;
+			text-align: right;
+			z-index: 100;
+		}
 	}
-	.navbar .btn-navbar {
-		background-color: #E6E6E4;
+
+	.navbar {
+		padding: 0;
+		.btn-navbar {
+			background-color: #E6E6E4;
+		}
+		.affix {
+			position: relative;
+		}
 	}
 	.navbar-inverse .btn-navbar:hover,
 	.navbar-inverse .btn-navbar:focus,
@@ -832,12 +841,21 @@ section#rubrique-5 {
 	h2 {
 		line-height: 1em;
 	}
+	#header {
+		background: none!important;
+		min-height: 0!important;
+	}
 	#content > section header .texte {
 		width: 100%;
 		strong {
 			font-size: 2em;
 		}
 	}
+
+	#content #rubrique-1 {
+		padding: 0;
+	}
+
 	#rubrique-4 {
 		.main {
 			.texte {
