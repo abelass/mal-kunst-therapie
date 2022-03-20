@@ -176,10 +176,13 @@ h1, .h1, .h1-like {
 .grid {
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -1em;
+	justify-content: space-between;
+	width: 100%;
 	.item {
-		width: 48%;
-		margin-left: 1em;
+		width: 47%;
+	}
+	.item:nth-child(even) {
+		margin-left: 3em;
 	}
 }
 
@@ -291,11 +294,6 @@ section#rubrique-2 {
 			hyphens: none;
 		}
 	}
-	.span8 .span6:last-child{
-		article{
-			padding-left: 1em;
-		}
-	}
 	.ps {
 		background-size: 100%;
 		margin-bottom: 1%;
@@ -315,6 +313,8 @@ section#rubrique-2 {
 		}
 	}
 }
+
+
 
 // Fotogalerie
 section#rubrique-9 {
@@ -344,12 +344,15 @@ section#rubrique-9 {
 // Therapien und Preise
 #rubrique-3 {
 	.span8 > .cartouche {
+		padding-bottom: 2.5em;
 		margin-bottom: 2.5em;
+		border-bottom: @grayDark 2px solid;
 	}
-	.row-fluid {
-		margin-top: 3.75em;
-		padding-top: 3.75em;
-		border-top: @grayDark 2px solid;
+	.grid {
+		margin-top: 2.75em;
+		.item {
+			margin-bottom: 2.75em;
+		}
 	}
 	.ps {
 		margin-top: 0;
@@ -357,15 +360,6 @@ section#rubrique-9 {
 		p {
 			margin:0;
 		}
-	}
-	.row-fluid [class*="span"]:nth-child(odd){
-		margin-left: 0;
-	}
-	.row-fluid [class*="span"]:last-child {
-		float: left;
-	}
-	.angebot {
-		margin-bottom: 3.75em;
 	}
 }
 
@@ -387,15 +381,20 @@ section#rubrique-9 {
 		> .texte {
 			display: flex;
 			flex-flow: row wrap;
-			align-items: flex-start;
+			justify-content: center;
+			width: 100%;
 			ul {
 				align-self: center;
 			}
-			> p, ul {
-				width: 48%;
-				margin: 1em auto;
+			> * {
+				width: 47%;
 			}
-
+			> * {
+				width: 47%;
+			}
+			> *:nth-child(even) {
+				margin-left: 3em;
+			}
 			li {
 				margin-bottom: 0.4em;
 			}
@@ -609,6 +608,25 @@ section#rubrique-5 {
 	}
 }
 @media (min-width: 1200px) {
+	.principale {
+		.row-fluid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			.span6 {
+				width: 48%;
+				margin-bottom: 3.75em;
+			}
+		}
+		.row-fluid [class*="span"]:nth-child(even) {
+			margin-left: 2.12765957%;
+		}
+	}
+
+	.row-fluid [class*="span"]:last-child {
+		margin-left: 0;
+		float: none;
+	}
 
 	#rubrique-2 .ps {
 		font-size: 2.875em;
@@ -644,10 +662,15 @@ section#rubrique-5 {
 }
 
 @media (max-width: 979px) {
-	.grid .item {
-		width: 47%;
-		margin-left: 1em;
+	.grid {
+		.item {
+			width: 47%;
+		}
+		.item:nth-child(2) {
+			margin-left: 1em;
+		}
 	}
+
 
 	#content > section, section#rubrique-7, .end {
 		padding: 4em 0 0 ;
