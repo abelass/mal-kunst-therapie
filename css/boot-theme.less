@@ -154,9 +154,14 @@ h1, .h1, .h1-like {
  * General
  */
 
-.principale .row:not(.force) > [class*="span"] {
-	float:none;
-	margin: 0 auto;
+.principale{
+	.row:not(.force) > [class*="span"] {
+		float:none;
+		margin: 0 auto;
+	}
+	.cartouche {
+		margin-bottom: 2.5em;
+	}
 }
 
 .slogan {
@@ -314,31 +319,6 @@ section#rubrique-2 {
 	}
 }
 
-// Fotogalerie
-section#rubrique-9 {
-	header .texte {
-		margin-bottom: 2.5em;
-		width: 65%;
-	}
-	.slick-prev::before, .slick-next::before {
-		color: @grayLight;
-		font-size: 40px
-	}
-	.slick-prev, .slick-next {
-		width: 40px;
-		height: 40px;
-	}
-	.slick-next {
-		right: 0;
-		transform: translate(-5px, -50%);
-	}
-	.slick-prev {
-		left: 0;
-		z-index: 100;
-		transform: translate(5px, -50%);
-	}
-}
-
 // Therapien und Preise
 #rubrique-3 {
 	.span8 > .cartouche {
@@ -353,7 +333,7 @@ section#rubrique-9 {
 		}
 	}
 	.ps {
-		margin-top: 0;
+		margin-top: -3.5em;
 		margin-bottom: 0;
 		p {
 			margin:0;
@@ -575,6 +555,31 @@ section#rubrique-5 {
 				padding: 2em 1.25em 0;
 			}
 		}
+	}
+}
+
+// Fotogalerie
+section#rubrique-9 {
+	header .texte {
+		margin-bottom: 2.5em;
+		width: 65%;
+	}
+	.slick-prev::before, .slick-next::before {
+		color: @grayLight;
+		font-size: 40px
+	}
+	.slick-prev, .slick-next {
+		width: 40px;
+		height: 40px;
+	}
+	.slick-next {
+		right: 0;
+		transform: translate(-5px, -50%);
+	}
+	.slick-prev {
+		left: 0;
+		z-index: 100;
+		transform: translate(5px, -50%);
 	}
 }
 
