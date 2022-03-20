@@ -11,9 +11,12 @@
 <div class="details">
 	<div class="row">
 		<div class="span8">
-		<BOUCLE_articles(ARTICLES){id_rubrique}>
-			<INCLURE{fond=content/article, id_article, composition=#COMPOSITION, type-page=article, env} />
-		</BOUCLE_articles>
+			<div class="articles">
+				<BOUCLE_articles(ARTICLES){id_rubrique}>
+					<INCLURE{fond=content/article, id_article, composition=#COMPOSITION, type-page=article, env} />
+				</BOUCLE_articles>
+			</div>
+			[(#LOGO_RUBRIQUE|image_reduire{460})]
 		</div>
 	</div>
 </div>

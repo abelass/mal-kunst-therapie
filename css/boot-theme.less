@@ -154,7 +154,7 @@ h1, .h1, .h1-like {
  * General
  */
 
-.principale .row > [class*="span"] {
+.principale .row:not(.force) > [class*="span"] {
 	float:none;
 	margin: 0 auto;
 }
@@ -222,10 +222,19 @@ h1, .h1, .h1-like {
 		background-repeat: no-repeat;
 		background-color:  #f4f4f4;
 		background-position: 120% 50%;
+		.span8 {
+			display: flex;
+			align-items: center;
+			.articles {
+				width: 55%;
+				margin-right: 3rem;
+			}
+			img {
+				width : 45%;
 
-		article {
-			width: 66%;
+			}
 		}
+
 		article:first-child {
 			margin-bottom: 4.375em;
 		}
@@ -255,6 +264,9 @@ section#rubrique-2 {
 	}
 
 	.cartouche {
+		img.spip_logo {
+			float:none;
+		}
 		.span8 {
 			margin: 0 auto;
 			float: none;
