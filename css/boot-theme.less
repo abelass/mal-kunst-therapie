@@ -155,6 +155,11 @@ h1, .h1, .h1-like {
  */
 
 .principale{
+	.row-fluid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	.row:not(.force) > [class*="span"] {
 		float:none;
 		margin: 0 auto;
@@ -234,11 +239,11 @@ h1, .h1, .h1-like {
 			display: flex;
 			align-items: center;
 			.articles {
-				width: 55%;
+				width: 50%;
 				margin-right: 3rem;
 			}
 			img {
-				width : 45%;
+				width : 50%;
 
 			}
 		}
@@ -302,7 +307,7 @@ section#rubrique-2 {
 	.ps {
 		background-size: 100%;
 		margin-bottom: 1%;
-		margin-top: 30%;
+		margin-top: 20%;
 		color: white;
 		font-family: kaushan_scriptregular;
 		font-size: 2.475em;
@@ -329,8 +334,11 @@ section#rubrique-2 {
 	.grid {
 		margin-top: 2.75em;
 		.item {
-			margin-bottom: 2.75em;
+			margin-bottom: 2.25em;
+			position: relative;
+
 		}
+
 	}
 	.ps {
 		margin-top: -3.5em;
@@ -364,12 +372,10 @@ section#rubrique-2 {
 			ul {
 				align-self: center;
 			}
-			> * {
+			> *:not(.items) {
 				width: 47%;
 			}
-			> * {
-				width: 47%;
-			}
+
 			> *:nth-child(even) {
 				margin-left: 3em;
 			}
@@ -612,9 +618,6 @@ section#rubrique-9 {
 @media (min-width: 1200px) {
 	.principale {
 		.row-fluid {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
 			.span6 {
 				width: 48%;
 				margin-bottom: 3.75em;
@@ -634,6 +637,15 @@ section#rubrique-9 {
 		font-size: 2.875em;
 		margin-top: 40%;
 	}
+
+	#rubrique-3 {
+		.grid {
+			.item:nth-child(odd)::after {
+				width: 930px;
+			}
+		}
+	}
+
 	section#rubrique-9 .slick-prev {
 		transform: translate(-45px, -50%);
 	}
@@ -661,12 +673,20 @@ section#rubrique-9 {
 	section#rubrique-5 .faq dl dt span, section#rubrique-5 .faq dl dd span {
 		padding: 2em 0.5em;
 	}
+
+	#rubrique-3 {
+		.grid {
+			.item:nth-child(odd)::after {
+				width: 980px;
+			}
+		}
+	}
 }
 
 @media (max-width: 979px) {
 	.grid {
 		.item {
-			width: 47%;
+			width: 46%;
 		}
 		.item:nth-child(2) {
 			margin-left: 1em;
@@ -674,13 +694,16 @@ section#rubrique-9 {
 	}
 
 
-	#content > section, section#rubrique-7, .end {
-		padding: 4em 0 0 ;
-		.row > .span8 {
-			width: 98%;
+	#content {
+		margin : 0 1em;
+		position: relative;
+		> section, section#rubrique-7, .end {
+				padding: 4em 0 0 ;
+				.row > .span8 {
+					width: 98%;
+				}
 		}
 	}
-
 	#rubrique-1 {
 		.details {
 			background-image: none;
@@ -703,6 +726,18 @@ section#rubrique-9 {
 			margin-top: 12%;
 		}
 	}
+		#rubrique-3 {
+		.grid {
+			.item:nth-child(odd)::after {
+				width: 100%;
+				margin-left: 50%;
+			}
+		}
+	}
+
+	#rubrique-4 .main > .texte > :not(.items) {
+  width: 46%;
+}
 }
 
 @media (min-width: 768px) {
@@ -711,13 +746,37 @@ section#rubrique-9 {
 		width: 100%!important;
 		left: 0!important;
 	}
+
+	#rubrique-3 {
+		.item:nth-child(odd):not(:nth-last-child(2)) {
+			padding-bottom: 0.5em;
+		}
+
+		.item:nth-child(odd):not(:nth-last-child(2))::after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			content: '';
+			display: block;
+			height : 0.25em;
+			background-image: url('images/zwischenstreifen.jpeg');
+		}
+	}
+
 }
 
 @media (max-width: 767px) {
-	.grid .item {
+	.grid {
+		.item {
 		width: 100%;
-		margin-left: 1em;
+		margin-left: 0;
+		}
+
+		.item:nth-child(2n) {
+			margin-left: 0;
+		}
 	}
+
 
 	h1#logo_site_spip {
 		width: 100%!important;
@@ -764,6 +823,13 @@ section#rubrique-9 {
 		.details {
 			margin: 0;
 			padding: 2em;
+			.span8 {
+ 				.articles {
+				width: 100%;
+				margin-right: 0;
+				}
+				img {display: none}
+			}
 			article {
 				width: 100%;
 			}
@@ -783,12 +849,17 @@ section#rubrique-9 {
 		}
 	.span8 .span6:last-child article {
 		padding-left: 0;
-}
+		}
 	}
 	#rubrique-3{
 	.angebot {
 		margin-bottom: 2em;
 	}
+	.grid {
+			.item:nth-child(odd)::after {
+				width: 100%;
+			}
+		}
 	.ps {
 			margin-top: 0;
 			margin-bottom: 4em;
@@ -816,7 +887,11 @@ section#rubrique-9 {
 					order: 4;
 				}
 			}
+			> .texte > :not(.items) {
+				width: 100%;
+			}
 		}
+
 		.items {
 			display:none;
 		}
@@ -872,6 +947,10 @@ section#rubrique-9 {
 }
 
 @media (max-width: 414px) {
+.cartouche .spip_logo {
+	margin: 0;
+}
+
 	h1, .h1, .h1-like {
 		font-size: 2em;
 	}
@@ -882,11 +961,15 @@ section#rubrique-9 {
 		background: none!important;
 		min-height: 0!important;
 	}
-	#content > section header .texte {
+	#content{
+		margin: 0;
+		 > section header .texte {
 		width: 100%;
 		strong {
 			font-size: 2em;
 		}
+	}
+
 	}
 
 	#content #rubrique-1 {
@@ -900,6 +983,9 @@ section#rubrique-9 {
 					width: 100%;
 					float: none;
 				}
+			}
+			> .texte > :nth-child(2n) {
+				margin-left: 0;
 			}
 		}
 	}
