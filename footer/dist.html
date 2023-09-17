@@ -3,8 +3,8 @@
 		<img src="#CHEMIN{images/icon_instagram.svg}" alt="icon instagram" width="45" /></a> | © Simone Müller Schumann 2016[(#DATE|affdate{annee}|>{2016}|oui)[ - (#DATE|affdate{annee})]]
 		<B_datenschutz>
 			|
-		<BOUCLE_datenschuts(DOCUMENTS){descriptif=Datenschutz} {tout}>
+		<BOUCLE_datenschutz(DOCUMENTS){descriptif=Datenschutz} {tout} {0,1}>
 			[<a href="[(#URL_DOCUMENT)]" target="_blank">(#TITRE)</a>]
-		</BOUCLE_datenschuts>
+		</BOUCLE_datenschutz>
 		| <a href="http://www.spip.net/" title="<:site_realise_avec_spip:>"><:site_realise_avec_spip:></a> by <a href="https://web-simple.eu/">Web Simple</a>
 </p>
