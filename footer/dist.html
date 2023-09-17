@@ -1,4 +1,10 @@
 <p>
 	<a href="https://www.instagram.com/kunst_therapie_baden/" title="Instagram">
-		<img src="#CHEMIN{images/icon_instagram.svg}" alt="icon instagram" width="45" /></a> | © Simone Müller Schumann 2016[(#DATE|affdate{annee}|>{2016}|oui)[ - (#DATE|affdate{annee})]] | <a href="http://www.spip.net/" title="<:site_realise_avec_spip:>"><:site_realise_avec_spip:></a> by <a href="https://websimple.be/">Web Simple</a>
+		<img src="#CHEMIN{images/icon_instagram.svg}" alt="icon instagram" width="45" /></a> | © Simone Müller Schumann 2016[(#DATE|affdate{annee}|>{2016}|oui)[ - (#DATE|affdate{annee})]]
+		<B_datenschutz>
+			|
+		<BOUCLE_datenschuts(DOCUMENTS){descriptif=Datenschutz} {tout}>
+			[<a href="[(#URL_DOCUMENT)]" target="_blank">(#TITRE)</a>]
+		</BOUCLE_datenschuts>
+		| <a href="http://www.spip.net/" title="<:site_realise_avec_spip:>"><:site_realise_avec_spip:></a> by <a href="https://web-simple.eu/">Web Simple</a>
 </p>
